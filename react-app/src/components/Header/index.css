@@ -1,0 +1,9 @@
+.toggle {
+  border: none;
+}
+
+.navbar-default {
+  background: #fff;
+  border-radius: 0px;
+  border-bottom: 1px solid #dfdede;
+}
