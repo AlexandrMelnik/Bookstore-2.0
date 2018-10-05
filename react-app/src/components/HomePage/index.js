@@ -4,7 +4,7 @@ import BooksList from '../BooksList';
 
 class HomePage extends Component {
   componentDidMount() {
-    this.props.getPopularBooks();
+    this.props.getAllBooks();
   }
 
   render() {

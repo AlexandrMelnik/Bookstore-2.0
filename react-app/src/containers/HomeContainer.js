@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getPopularBooks } from '../redux/actions/books';
+import { getAllBooks } from '../redux/actions/books';
 import HomePage from '../components/HomePage';
 
 HomePage.propTypes = {
@@ -13,7 +13,7 @@ HomePage.propTypes = {
     image: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
   })).isRequired,
-  getPopularBooks: PropTypes.func.isRequired,
+  getAllBooks: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired
 }
 
@@ -24,4 +24,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { getPopularBooks })(HomePage);
+export default connect(mapStateToProps, { getAllBooks })(HomePage);

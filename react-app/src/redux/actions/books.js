@@ -1,12 +1,22 @@
-import { GET_POPULAR_BOOKS } from '../actions/types';
+import { GET_ALL_BOOKS, GET_BOOK } from '../actions/types';
 import api from '../api';
 
-export const getPupularBooks = books => ({
-  type: GET_POPULAR_BOOKS,
+export const getBooks = books => ({
+  type: GET_ALL_BOOKS,
   books
 });
 
-export const getPopularBooks = () => dispatch =>
-  api.books.popular().then(books => {
-    dispatch(getPupularBooks(books))
-  });
+export const getAllBooks = () => dispatch =>
+  api.books.all().then(books => {
+    dispatch(getBooks(books))
+});
+
+export const getBook = book => ({
+  type: GET_BOOK,
+  book
+});
+
+export const getBookId = id => dispatch =>
+  api.books.getBook(id).then(book => {
+    dispatch(getBook(book))
+});

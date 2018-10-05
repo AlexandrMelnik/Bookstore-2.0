@@ -3,4 +3,5 @@ export const ACCOUNT_LOGOUT = 'ACCOUNT_LOGOUT';
 
 export const GET_ALL_CATEGORIES = 'GET_ALL_CATEGORIES';
 
-export const GET_POPULAR_BOOKS = 'GET_POPULAR_BOOKS';
+export const GET_ALL_BOOKS = 'GET_ALL_BOOKS';
+export const GET_BOOK = 'GET_BOOK';
