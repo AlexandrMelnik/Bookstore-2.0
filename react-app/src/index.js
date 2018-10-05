@@ -25,8 +25,12 @@ if(localStorage.token) {
 addLocaleData(en);
 addLocaleData(ru);
 
-if(localStorage.lang)
+if(localStorage.lang) {
   store.dispatch(setLocale(localStorage.lang));
+} else {
+  store.dispatch(setLocale('en'));
+}
+
 
 ReactDOM.render(
   <BrowserRouter>
