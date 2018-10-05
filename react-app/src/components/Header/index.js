@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import i18next from 'i18next';
 import FontAwesome from 'react-fontawesome';
 import {
   Navbar,
@@ -19,7 +20,7 @@ class Header extends Component {
   }
 
   render() {
-    const { isAuth, logout, loading, categories } = this.props;
+    const { isAuth, logout, loading, categories, setLocale } = this.props;
     return (
       <Navbar  collapseOnSelect>
         <Navbar.Header>
@@ -35,40 +36,50 @@ class Header extends Component {
         <Navbar.Collapse>
           <Nav pullLeft>
             <NavItem componentClass={ Link } eventKey={1} to="/" href="/">
-              Home
+              {i18next.t('menu_main')}
             </NavItem>
-            <NavDropdown title="Categories" eventKey={2} id="basic-nav-dropdown">
-              {!loading && 'Loading categories...'}
-              {categories.map((category, index) => (
+            <NavDropdown title={i18next.t('menu_categories')} eventKey={2} id="basic-nav-dropdown">
+              {!loading ? i18next.t('loading')  :
+              categories.map((category, index) => (
                 <MenuItem componentClass={Link} key={index} to={'/category/' + category.id} href={'/category/' + category.id}>{category.name}</MenuItem>
               ))}
             </NavDropdown>
           </Nav>
           <Navbar.Form pullLeft>
             <FormGroup>
-              <FormControl className="modern-search" type="text" placeholder="Search books" />
+              <FormControl className="modern-search" type="text" placeholder={i18next.t('search_book')} />
             </FormGroup>
           </Navbar.Form>
+          <Nav pullRight>
+            <NavDropdown
+              eventKey={2}
+              title={i18next.t('lang')}
+              id="basic-nav-dropdown"
+              >
+              <MenuItem eventKey={2.1} onClick={() => setLocale('en')}>English</MenuItem>
+              <MenuItem eventKey={2.1} onClick={() => setLocale('ru')}>Русский</MenuItem>
+            </NavDropdown>
+          </Nav>
           {
             isAuth ?
             <Nav pullRight>
               <NavDropdown
-                eventKey={1}
+                eventKey={3}
                 title={ <Image width={20} src="/user.png" circle /> }
                 id="basic-nav-dropdown"
                 >
-                <MenuItem componentClass={Link} eventKey={1.1} to="/profile" href="/profile">Profile</MenuItem>
+                <MenuItem componentClass={Link} eventKey={3.1} to="/profile" href="/profile">{i18next.t('menu_profile')}</MenuItem>
                   <MenuItem divider />
-                  <MenuItem eventKey={1.2} onClick={() => logout()}>Logout</MenuItem>
+                  <MenuItem eventKey={3.2} onClick={() => logout()}>{i18next.t('menu_logout')}</MenuItem>
               </NavDropdown>
             </Nav>
             :
             <Nav pullRight>
               <NavItem componentClass={ Link } eventKey={1} to="/signin" href="/signin">
-                Signin
+                {i18next.t('menu_signin')}
               </NavItem>
               <NavItem componentClass={ Link } eventKey={2} to="/signup" href="/signup">
-                Signup
+                {i18next.t('menu_signup')}
               </NavItem>
             </Nav>
           }

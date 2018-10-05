@@ -1,0 +1,27 @@
+{
+  "en": {
+    "translation": {
+      "menu_main": "Home",
+      "menu_categories": "Categories",
+      "menu_profile": "Profile",
+      "menu_logout": "Logout",
+      "menu_signin": "Signin",
+      "menu_signup": "Signup",
+      "home_page": "Home page",
+      "popular_book": "Popular books",
+      "loading": "Loading...",
+      "lang": "Language",
+      "search_book": "Search books",
+      "details": "Details",
+      "add_to_cart": "Add to cart",
+      "create_password": "Create password",
+      "password": "Password",
+      "message_password": "Enter your account password",
+      "message_email": "Enter your e-mail address",
+      "message_username": "Enter your name",
+      "email": "Email",
+      "username": "Your name",
+      "terms": "I agree with the terms of use of the service, as well as with the transfer and processing of my data"
+    }
+  }
+}

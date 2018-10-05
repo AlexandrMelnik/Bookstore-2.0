@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Label } from 'react-bootstrap';
 import BooksList from '../BooksList';
+import i18next from 'i18next';
 
 class HomePage extends Component {
   componentDidMount() {
@@ -13,7 +14,7 @@ class HomePage extends Component {
       <div className="home">
         <h4>
           <Label bsStyle="primary">
-            Home page - Popular books
+             {i18next.t('home_page')} - {i18next.t('popular_book')}
           </Label>
         </h4>
         <hr />

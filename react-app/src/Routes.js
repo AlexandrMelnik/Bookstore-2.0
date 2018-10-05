@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 import { Grid } from 'react-bootstrap';
 import UserRoute from './containers/routes/UserRoute';
@@ -23,11 +22,5 @@ const Routes = ({ location }) => (
     <UserRoute location={ location } path="/confirm/:token" component={ ConfirmPage }/>
   </Grid>
 );
-
-Routes.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired
-  }).isRequired
-};
 
 export default Routes;

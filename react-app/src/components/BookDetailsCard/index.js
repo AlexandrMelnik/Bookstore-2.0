@@ -1,4 +1,5 @@
 import React from 'react';
+import i18next from 'i18next';
 import FontAwesome from 'react-fontawesome';
 import StarRatings from 'react-star-ratings';
 import { Panel, Col, Row, Image, Button } from 'react-bootstrap';
@@ -19,9 +20,9 @@ const BookDetailsCard = (props) => (
           />
           <p style={{marginTop: '1.300rem'}}>{props.desc}</p>
           <Button bsStyle="info">
-            <FontAwesome name='cart-plus' /> Add to cart
+            <FontAwesome name='cart-plus' /> {i18next.t('add_to_cart')}
           </Button>
-          <p style={{marginTop: '1.300rem'}}> Categories: Drama, Fentesy </p>
+          <p style={{marginTop: '1.300rem'}}> {i18next.t('menu_categories')}: Drama, Fentesy </p>
         </Col>
       </Row>
     </Panel.Body>

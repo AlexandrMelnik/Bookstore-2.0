@@ -1,4 +1,5 @@
 import React from 'react';
+import i18next from 'i18next';
 import { Link } from 'react-router-dom';
 import StarRatings from 'react-star-ratings';
 import FontAwesome from 'react-fontawesome';
@@ -27,7 +28,7 @@ const BookCard = (props) => (
           </Col>
           <Col  md={8}>
             <Link to={'/book/' + props.id} style={{textDecoration: 'none'}}>
-              <Button bsStyle="default" block>Details</Button>
+              <Button bsStyle="default" block>{i18next.t('details')}</Button>
             </Link>
           </Col>
         </Row>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import i18next from 'i18next';
 import Validator from 'validator';
 import {
   Form,
@@ -39,8 +40,8 @@ class SigninForm extends Component {
 
   validate = data => {
     const errors = {};
-    if(!Validator.isEmail(data.email)) errors.email = 'Enter your e-mail address';
-    if(!data.password) errors.password = 'Enter your account password';
+    if(!Validator.isEmail(data.email)) errors.email = i18next.t('message_email');
+    if(!data.password) errors.password = i18next.t('message_password');
     return errors;
   };
 
@@ -49,7 +50,7 @@ class SigninForm extends Component {
     return (
       <Form onSubmit={this.onSubmit}>
         <FormGroup bsSize="large" validationState={ errors.email && 'error' }>
-          <ControlLabel> Email </ControlLabel>
+          <ControlLabel> {i18next.t('email')} </ControlLabel>
           <FormControl
             type='email'
             name='email'
@@ -59,17 +60,17 @@ class SigninForm extends Component {
           {errors.email && <HelpBlock>{errors.email}</HelpBlock>}
         </FormGroup>
         <FormGroup bsSize="large" validationState={ errors.password && 'error' }>
-          <ControlLabel> Password </ControlLabel>
+          <ControlLabel> {i18next.t('password')} </ControlLabel>
           <FormControl
             type='password'
             name='password'
-            placeholder='Create a password'
+            placeholder={i18next.t('password')}
             value={data.password}
             onChange={this.onChange} />
           {errors.password && <HelpBlock>{errors.password}</HelpBlock>}
         </FormGroup>
         { errors.server && <Alert bsStyle="danger">{errors.server}</Alert> }
-        <Button type='submit' bsStyle='info' bsSize='large' className='modern-button' block disabled={!!loading}> Signin </Button>
+        <Button type='submit' bsStyle='info' bsSize='large' className='modern-button' block disabled={!!loading}> {i18next.t('menu_signin')} </Button>
       </Form>
     );
   }
