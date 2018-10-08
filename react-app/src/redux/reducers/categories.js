@@ -1,4 +1,4 @@
-import { GET_ALL_CATEGORIES } from '../actions/types';
+import { FETCH_CATEGORIES_SUCCESS } from '../actions/types';
 
 const initialState = {
   loading: false,
@@ -7,7 +7,7 @@ const initialState = {
 
 export default function categories(state = initialState, action = {}) {
   switch(action.type) {
-    case GET_ALL_CATEGORIES:
+    case FETCH_CATEGORIES_SUCCESS:
       return {
         ...state,
         loading: true,

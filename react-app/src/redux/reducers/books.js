@@ -1,4 +1,4 @@
-import { GET_ALL_BOOKS, GET_BOOK } from '../actions/types';
+import { FETCH_BOOKS_SUCCESS, GET_BOOK } from '../actions/types';
 
 const initialState = {
   loading: false,
@@ -8,7 +8,7 @@ const initialState = {
 
 export default function books(state = initialState, action = {}) {
   switch(action.type) {
-    case GET_ALL_BOOKS:
+    case FETCH_BOOKS_SUCCESS:
       return {
         ...state,
         loading: true,

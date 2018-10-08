@@ -20,7 +20,7 @@ HomePage.propTypes = {
 function mapStateToProps(state) {
   return {
     books: state.books.books,
-    loading: state.books.loading,
+    loading: state.books.loading
   }
 }
 

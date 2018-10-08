@@ -5,7 +5,7 @@ import Routes from '../Routes';
 import Header from './HeaderContainer';
 import Footer from '../components/Footer';
 
-const App = ({ location }) => (
+const App = ({ location, search_books }) => (
   <div className="app">
     <Header />
     <Routes location={ location } />
@@ -19,7 +19,7 @@ App.propTypes = {
   }).isRequired
 }
 
-function mapStateToProps(state, props) {
+function mapStateToProps(state) {
   return {
     locale: state.locale
   }

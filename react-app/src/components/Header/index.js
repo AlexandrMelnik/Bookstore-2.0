@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import i18next from 'i18next';
 import FontAwesome from 'react-fontawesome';
+import Search from '../../containers/SearchContainer';
 import {
   Navbar,
   Nav,
   NavItem,
   NavDropdown,
   MenuItem,
-  Image,
-  FormGroup,
-  FormControl
+  Image
 } from 'react-bootstrap';
 import './index.css';
 
@@ -45,11 +44,7 @@ class Header extends Component {
               ))}
             </NavDropdown>
           </Nav>
-          <Navbar.Form pullLeft>
-            <FormGroup>
-              <FormControl className="modern-search" type="text" placeholder={i18next.t('search_book')} />
-            </FormGroup>
-          </Navbar.Form>
+          <Search />
           <Nav pullRight>
             <NavDropdown
               eventKey={2}

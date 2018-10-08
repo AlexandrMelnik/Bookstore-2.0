@@ -21,6 +21,10 @@ class SigninForm extends Component {
     errors: {}
   };
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ errors: nextProps.serverErrors });
+  }
+
   onChange = e => {
     this.setState({
       data: { ...this.state.data, [e.target.name]: e.target.value }
@@ -33,8 +37,8 @@ class SigninForm extends Component {
     this.setState({ errors });
     if(Object.keys( errors ).length === 0) {
       this.setState({ loading: true });
-      this.props.submit(this.state.data)
-        .catch(err => this.setState({ errors: err.response.data.errors, loading: false }));
+      this.props.signin(this.state.data);
+      this.setState({ loading: false });
     }
   };
 

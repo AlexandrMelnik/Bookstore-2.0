@@ -3,6 +3,7 @@ import { Label } from 'react-bootstrap';
 import BooksList from '../BooksList';
 import i18next from 'i18next';
 
+
 class HomePage extends Component {
   componentDidMount() {
     this.props.getAllBooks();

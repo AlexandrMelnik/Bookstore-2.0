@@ -5,8 +5,8 @@ import UserRoute from './containers/routes/UserRoute';
 import GuestRoute from './containers/routes/GuestRoute';
 
 import HomePage from './containers/HomeContainer';
-import SigninPage from './containers/SigninContainer';
-import SignupPage from './containers/SignupContainer';
+import SigninPage from './components/SigninPage';
+import SignupPage from './components/SignupPage';
 import ProfilePage from './components/ProfilePage';
 import ConfirmPage from './containers/ConfirmContainer';
 
