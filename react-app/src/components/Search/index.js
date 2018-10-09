@@ -9,7 +9,7 @@ import {
 class Search extends Component {
   handleKeyPress = e => {
     if (e.key === 'Enter') {
-      //TODO...
+      //TODO This test
     }
   }
 
