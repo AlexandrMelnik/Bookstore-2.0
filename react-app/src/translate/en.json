@@ -12,6 +12,8 @@
       "loading": "Loading...",
       "lang": "Language",
       "search_book": "Search books",
+      "search": "Search",
+      "results": "Results",
       "details": "Details",
       "add_to_cart": "Add to cart",
       "create_password": "Create password",

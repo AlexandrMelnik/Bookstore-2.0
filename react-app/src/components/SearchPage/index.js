@@ -11,7 +11,7 @@ class SearchPage extends Component {
       <div className="search-page">
         <h4>
           <Label bsStyle="primary">
-             Поиск: {this.props.match.params.query} - Результатов: {books.length}
+             {i18next.t('search')}: {this.props.match.params.query} - {i18next.t('results')}: {books.length}
           </Label>
         </h4>
         <hr />
