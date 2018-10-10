@@ -15,7 +15,7 @@ class HomePage extends Component {
           </Label>
         </h4>
         <hr />
-        {!loading ? 'Loading books' : <BooksList books={books} />}
+        {!loading ? i18next.t('loading') : <BooksList books={books} />}
       </div>
     );
   }
