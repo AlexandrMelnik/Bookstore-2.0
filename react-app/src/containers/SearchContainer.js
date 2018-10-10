@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
-import Search from '../components/Search';
+import SearchPage from '../components/SearchPage';
 
-
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
   return {
-
+    books: state.books.books.filter(book => book.title.includes(ownProps.match.params.query))
   }
 }
 
-export default connect(mapStateToProps, null)(Search);
+export default connect(mapStateToProps, null)(SearchPage);
