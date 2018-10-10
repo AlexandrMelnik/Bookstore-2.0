@@ -1,6 +1,7 @@
 {
   "ru": {
     "translation": {
+      "no_data": "Нету данных",
       "menu_main": "Главная",
       "menu_categories": "Категории",
       "menu_profile": "Мой профиль",
