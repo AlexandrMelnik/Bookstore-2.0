@@ -9,7 +9,9 @@ import {
 class Search extends Component {
   handleKeyPress = e => {
     if (e.key === 'Enter') {
-      //TODO This test
+      if(e.target.value) {
+        this.props.history.push('/search/' + e.target.value);
+      }
     }
   }
 
