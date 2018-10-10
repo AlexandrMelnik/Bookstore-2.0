@@ -7,12 +7,13 @@ import { Provider } from 'react-redux';
 import { userLogin } from './redux/actions/account';
 import { setLocale } from './redux/actions/locale';
 import configureStore from './redux/configureStore';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import decode from 'jwt-decode';
 import App from './containers/App';
 import './styles/modern.css';
 
 const store = configureStore();
+
 if(localStorage.token) {
   const token = decode(localStorage.token);
   const user = {
@@ -31,12 +32,11 @@ if(localStorage.lang) {
   store.dispatch(setLocale('en'));
 }
 
-
 ReactDOM.render(
-  <BrowserRouter>
-    <Provider store={ store } >
+  <Provider store={ store } >
+    <BrowserRouter>
       <Route component={ App } />
-    </Provider>
-  </BrowserRouter>,
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('bookstore-app')
 );
