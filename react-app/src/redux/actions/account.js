@@ -8,7 +8,7 @@ import {
   ACCOUNT_LOGOUT
 } from '../actions/types';
 import api from '../../api';
-import hystory from '../../hystory';
+import history from '../../history';
 
 export const userLogin = user => ({
   type: ACCOUNT_LOGIN_SUCCESS,
@@ -20,7 +20,7 @@ export const signin = data => dispatch => {
   return api.account.signin(data).then(user => {
     localStorage.token = user.token;
     dispatch(userLogin(user));
-    hystory.push('/');
+    history.push('/');
   }).catch(err => dispatch({
     type: ACCOUNT_LOGIN_FAILURE,
     payload: err.response.data.errors
@@ -33,7 +33,7 @@ export const signup = data => dispatch => {
     localStorage.token = user.token;
     dispatch({ type: ACCOUNT_CREATE_SUCCESS });
     dispatch(userLogin(user));
-    hystory.push('/profile');
+    history.push('/profile');
   }).catch(err => dispatch({
     type: ACCOUNT_CREATE_FAILURE,
     payload: err.response.data.errors

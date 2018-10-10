@@ -9,7 +9,6 @@ export default {
     confirm: token =>
       axios.post('/api/account/confirm', { token }).then(res => res.data.user)
   },
-  
   categories: () =>
     axios.get('/api/categories').then(res => res.data.categories),
   books: {
