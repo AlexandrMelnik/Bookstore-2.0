@@ -11,8 +11,8 @@ HomePage.propTypes = {
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
-  })).isRequire,
-  loading: PropTypes.bool.isRequire
+  })).isRequired,
+  loading: PropTypes.bool.isRequired
 }
 
 function mapStateToProps(state) {
