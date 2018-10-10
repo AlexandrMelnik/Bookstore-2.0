@@ -5,10 +5,6 @@ import i18next from 'i18next';
 
 
 class HomePage extends Component {
-  componentDidMount() {
-    this.props.getAllBooks();
-  }
-
   render() {
     const { loading, books } = this.props;
     return (
