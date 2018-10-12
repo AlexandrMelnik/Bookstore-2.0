@@ -6,7 +6,6 @@ import BooksList from '../BooksList';
 class SearchPage extends Component {
   render() {
     const { books, loading } = this.props;
-    console.log(books);
     return (
       <div className="search-page">
         <h4>
