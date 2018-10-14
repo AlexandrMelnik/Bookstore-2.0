@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import i18next from 'i18next';
 import FontAwesome from 'react-fontawesome';
-import Search from '../../components/Search';
+import Search from '../Search';
+import CartHeader from '../../containers/CartHeader';
 import {
   Navbar,
   Nav,
@@ -45,6 +46,7 @@ class Header extends Component {
             </NavDropdown>
           </Nav>
           <Search history={this.props.history}/>
+          <CartHeader />
           <Nav pullRight>
             <NavDropdown
               eventKey={2}
