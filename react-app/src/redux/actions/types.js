@@ -34,5 +34,8 @@ export const SET_LOCALE = 'SET_LOCALE';
 // Add new item to cart
 export const ADD_BOOK_TO_CART = 'ADD_BOOK_TO_CART';
 
+// Delete car item
+export const DELETE_CART_ITEM = 'DELETE_CART_ITEM';
+
 // Update quantity item
 export const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
