@@ -24,7 +24,7 @@ const BookCard = (props) => (
         <hr />
         <Row className="show-grid">
           <Col xs={12} md={4}>
-            <p><Button bsStyle="info" block><FontAwesome name='cart-plus' /></Button></p>
+            <p><Button bsStyle="info" block onClick={() => props.addBookToCart(props)}><FontAwesome name='cart-plus' /></Button></p>
           </Col>
           <Col  md={8}>
             <Link to={'/book/' + props.id} style={{textDecoration: 'none'}}>
