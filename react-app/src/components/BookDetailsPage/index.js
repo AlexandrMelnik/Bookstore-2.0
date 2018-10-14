@@ -8,15 +8,18 @@ class BookDetailsPage extends Component {
   }
 
   render() {
-    const { book, loading } = this.props;
+    const { book, loading, addBookToCart } = this.props;
     return (
       <Col md={8} mdOffset={2}>
         {!loading ? 'Loading details book...' :
           <BookDetailsCard
+            id={book.id}
             title={book.title}
-            img={book.image}
+            image={book.image}
             desc={book.description}
-            rating={book.rating}/>}
+            rating={book.rating}
+            price={book.price}
+            addBookToCart={addBookToCart} />}
       </Col>
     );
   }
