@@ -1,4 +1,8 @@
-import { ADD_BOOK_TO_CART, UPDATE_QUANTITY } from '../actions/types';
+import {
+  ADD_BOOK_TO_CART,
+  UPDATE_QUANTITY,
+  DELETE_CART_ITEM
+} from '../actions/types';
 
 const initialState = {
   items: []
@@ -31,6 +35,11 @@ export default function cart(state = initialState, action = {}) {
         };
       }
 
+    case DELETE_CART_ITEM:
+      const existItemDelete = findBookIndex(state.items, action.items.id);
+      return {
+        items: [...state.items.slice(0, existItemDelete), ...state.items.slice(existItemDelete+1)]
+      }
 
     default:
       return state;
