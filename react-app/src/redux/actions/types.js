@@ -39,3 +39,5 @@ export const DELETE_CART_ITEM = 'DELETE_CART_ITEM';
 
 // Update quantity item
 export const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
+
+export const UPDATE_BOOK_TO_CART = 'UPDATE_BOOK_TO_CART';
