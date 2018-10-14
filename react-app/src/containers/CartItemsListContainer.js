@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { updateQuantityItem } from '../redux/actions/cart';
+import { updateQuantityItem, deleteCartItem } from '../redux/actions/cart';
 import CartItemsList from '../components/CartItemsList';
 
 CartItemsList.propTypes = {
-  items: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired,
+  updateQuantityItem: PropTypes.func.isRequired,
+  deleteCartItem: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
@@ -13,4 +15,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {  updateQuantityItem  })(CartItemsList);
+export default connect(mapStateToProps, {  updateQuantityItem, deleteCartItem  })(CartItemsList);
