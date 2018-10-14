@@ -5,6 +5,7 @@ import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 import { Provider } from 'react-redux';
 import { userLogin } from './redux/actions/account';
+import { updateBookToCart } from './redux/actions/cart';
 import { setLocale } from './redux/actions/locale';
 import configureStore from './redux/configureStore';
 import { Route, BrowserRouter } from 'react-router-dom';
@@ -21,6 +22,10 @@ if(localStorage.token) {
     confirm: token.confirm
   }
   store.dispatch(userLogin(user));
+}
+
+if(localStorage.cart) {
+  store.dispatch(updateBookToCart(JSON.parse(localStorage.cart)));
 }
 
 addLocaleData(en);
