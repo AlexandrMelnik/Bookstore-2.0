@@ -3,6 +3,7 @@ import account from './account';
 import books from './books';
 import categories from './categories';
 import locale from './locale';
+import cart from './cart';
 import fetchFailure from './serverErrors';
 
 export default combineReducers({
@@ -10,5 +11,6 @@ export default combineReducers({
   categories,
   books,
   locale,
+  cart,
   fetchFailure
 });
