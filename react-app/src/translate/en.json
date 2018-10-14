@@ -1,6 +1,12 @@
 {
   "en": {
     "translation": {
+      "quantity": "Quantity",
+      "price": "Price",
+      "total_price": "Total price",
+      "cart_empty": "There is nothing in the basket",
+      "books": "{{count}} books",
+      "items": "{{count}} Items",
       "no_data": "No data",
       "menu_main": "Home",
       "menu_categories": "Categories",

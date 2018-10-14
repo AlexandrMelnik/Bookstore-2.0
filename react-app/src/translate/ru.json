@@ -1,6 +1,16 @@
 {
   "ru": {
     "translation": {
+      "quantity": "Количество",
+      "price": "Цена",
+      "total_price": "Итоговая цена",
+      "cart_empty": "В корзине ничего нет",
+      "books_0": "{{count}} книга",
+      "books_1": "{{count}} книги",
+      "books_2": "{{count}} книг",
+      "items_0": "{{count}} Предмета",
+      "items_1": "{{count}} Предмета",
+      "items_2": "{{count}} Предметов",
       "no_data": "Нету данных",
       "menu_main": "Главная",
       "menu_categories": "Категории",
