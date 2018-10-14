@@ -1,5 +1,5 @@
 import React from 'react';
-import BookCard from '../BookCard';
+import BookCard from '../../containers/BookCardContainer';
 import i18next from 'i18next';
 
 const BooksList = ({books}) => {
@@ -17,7 +17,8 @@ const BooksList = ({books}) => {
         title={book.title}
         author={book.author}
         rating={book.rating}
-        image={book.image} />
+        image={book.image}
+        price={book.price} />
     ));
   }
 };
