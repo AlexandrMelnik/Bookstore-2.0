@@ -11,6 +11,11 @@ class CartItemsList extends Component {
     this.props.updateQuantityItem({id, quantity: -1})
   }
 
+  deleteItem (id) {
+    this.props.deleteCartItem({id})
+  }
+
+
   render() {
     const { items } = this.props;
     if(items.length === 0) {
@@ -24,6 +29,7 @@ class CartItemsList extends Component {
         <CartItem
           key={index}
           cartItem={item}
+          deleteItem={this.deleteItem.bind(this, item.id)}
           deductQuality={this.DeductQuantity.bind(this, item.id)}
           addQuality={this.AddQuantity.bind(this, item.id)} />
       ));

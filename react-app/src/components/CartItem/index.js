@@ -32,7 +32,7 @@ class CartItem extends Component {
           </h5>
         </Media.Body>
         <Media.Left>
-          <Button>
+          <Button onClick={this.props.deleteItem}>
             <FontAwesome name="times" style={{display: 'block'}} />
           </Button>
         </Media.Left>
