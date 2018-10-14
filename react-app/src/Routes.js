@@ -11,11 +11,13 @@ import ProfilePage from './components/ProfilePage';
 import ConfirmPage from './containers/ConfirmContainer';
 import SearchPage from './containers/SearchContainer';
 import BookDetailsPage from './containers/BookDetailsContainer';
+import CartPage from './containers/CartPageContainer';
 
 const Routes = ({ location }) => (
   <Grid>
     <Route location={ location } exact path="/" component={ HomePage } />
     <Route location={ location } path="/book/:id" component={ BookDetailsPage } />
+    <Route location={ location } path="/cart" component={ CartPage } />
     <GuestRoute location={ location } path="/signin" component={ SigninPage } />
     <Route location={ location } path="/search/:query" component={ SearchPage } />
     <GuestRoute location={ location } path="/signup" component={ SignupPage } />
