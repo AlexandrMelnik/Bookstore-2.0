@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAllBooks } from '../redux/actions/books';
+import { getCategories } from '../redux/actions/categories';
 import PropTypes from 'prop-types';
 import Routes from '../Routes';
 import Header from './HeaderContainer';
@@ -8,7 +9,8 @@ import Footer from '../components/Footer';
 
 class App extends Component {
   componentDidMount() {
-    this.props.getAllBooks();  
+    this.props.getCategories();
+    this.props.getAllBooks();
   }
 
   render() {
@@ -36,7 +38,8 @@ App.propTypes = {
   getAllBooks: PropTypes.func.isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  getCategories: PropTypes.func.isRequired,
 }
 
 function mapStateToProps(state) {
@@ -47,4 +50,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { getAllBooks })(App);
+export default connect(mapStateToProps, { getAllBooks, getCategories })(App);
