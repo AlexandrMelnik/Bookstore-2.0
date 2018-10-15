@@ -18,6 +18,9 @@ const BookDetailsCard = (props) => (
             starDimension="20px"
             starSpacing="2px"
           />
+          <h4 style={{color: 'green'}}>
+            ${props.price}
+          </h4>
           <p style={{marginTop: '1.300rem'}}>{props.desc}</p>
           <Button bsStyle="info" onClick={() => props.addBookToCart(props)}>
             <FontAwesome name='cart-plus' /> {i18next.t('add_to_cart')}
