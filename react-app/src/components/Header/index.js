@@ -15,10 +15,6 @@ import {
 import './index.css';
 
 class Header extends Component {
-  componentDidMount() {
-    this.props.getCategories();
-  }
-
   render() {
     const { isAuth, logout, loading, categories, setLocale } = this.props;
     return (
