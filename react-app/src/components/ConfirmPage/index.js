@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import i18next from 'i18next';
 import { Link } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 
@@ -20,12 +21,12 @@ class ConfirmPage extends Component {
       <div className="confirm">
         {loading && (<Alert bsStyle="info"> Checking... </Alert>)}
         {!loading && success && (<Alert bsStyle="success">
-          <p>Your account has been verefied.</p>
-          <p><Link to="/profile">Go to profile</Link></p>
+          <p>{i18next.t('confirm_success')}</p>
+          <p><Link to="/profile">{i18next.t('go_to_profile')}</Link></p>
          </Alert>)}
         {!loading && !success && (<Alert bsStyle="danger">
-          <p>Invalid token.</p>
-          <p><Link to="/">Go to main page</Link></p>
+          <p>{i18next.t('confirm_error')}</p>
+          <p><Link to="/">{i18next.t('go_to_home')}</Link></p>
         </Alert>)}
       </div>
     );
