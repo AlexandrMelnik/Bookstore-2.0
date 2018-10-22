@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import i18next from 'i18next';
 import FontAwesome from 'react-fontawesome';
-import Search from '../Search';
+import Search from '../../containers/SearchHeaderContainer';
 import CartHeader from '../../containers/CartHeader';
 import {
   Navbar,
@@ -40,6 +40,9 @@ class Header extends Component {
                 <MenuItem componentClass={Link} key={index} to={'/category/' + category.id} href={'/category/' + category.id}>{category.name}</MenuItem>
               ))}
             </NavDropdown>
+            <NavItem componentClass={ Link } eventKey={3} to="/about" href="/about">
+              {i18next.t('menu_about')}
+            </NavItem>
           </Nav>
           <Search history={this.props.history}/>
           <CartHeader />
