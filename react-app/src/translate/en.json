@@ -1,6 +1,8 @@
 {
   "en": {
     "translation": {
+      "go_to_profile": "Go to profile",
+      "go_to_home": "Go to home page",
       "quantity": "Quantity",
       "price": "Price",
       "total_price": "Total price",
@@ -9,6 +11,7 @@
       "items": "{{count}} Items",
       "no_data": "No data",
       "menu_main": "Home",
+      "menu_about": "About us",
       "menu_categories": "Categories",
       "menu_profile": "Profile",
       "menu_logout": "Logout",
@@ -30,7 +33,15 @@
       "message_username": "Enter your name",
       "email": "Email",
       "username": "Your name",
-      "terms": "I agree with the terms of use of the service, as well as with the transfer and processing of my data"
+      "terms": "I agree with the terms of use of the service, as well as with the transfer and processing of my data",
+      "confirm_email_message": "Please check your email account and confirm the account",
+      "confirm_success": "Your account has been verified.",
+      "confirm_error": "Invalid token",
+      "contacts": "OUR CONTACTS",
+      "socials": "SOCIALS",
+      "about": "ABOUT US",
+      "bookstore_help": "ABOUT BOOKSTORE",
+      "bookstore_desc": "The Bookstore bookstore is located on Arcadian Drive, 3306 in downtown San Francisco. Walking through the floors of this bookstore, you can easily spend half a day here, passing from the department with the literature on music in the section of foreign literature. According to many residents of Berlin, it is in the Bookstore - the widest range of books of various subjects in English"
     }
   }
 }
