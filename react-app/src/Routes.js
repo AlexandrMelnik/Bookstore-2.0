@@ -5,6 +5,7 @@ import UserRoute from './containers/routes/UserRoute';
 import GuestRoute from './containers/routes/GuestRoute';
 
 import HomePage from './containers/HomeContainer';
+import AboutUsPage from './components/AboutUsPage';
 import SigninPage from './components/SigninPage';
 import SignupPage from './components/SignupPage';
 import ProfilePage from './components/ProfilePage';
@@ -17,6 +18,7 @@ import CategoriesPage from './containers/CategoriesPageContainer';
 const Routes = ({ location }) => (
   <Grid>
     <Route location={ location } exact path="/" component={ HomePage } />
+    <Route location={ location } path="/about" component={ AboutUsPage } />
     <Route location={ location } path="/book/:id" component={ BookDetailsPage } />
     <Route location={ location } path="/category/:id" component={ CategoriesPage } />
     <Route location={ location } path="/cart" component={ CartPage } />
