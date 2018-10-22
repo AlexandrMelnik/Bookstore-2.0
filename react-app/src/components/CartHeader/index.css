@@ -1,4 +1,9 @@
 .button-cart {
   border-color: #fff;
   border-radius: 500px;
+  opacity: 0.5;
+}
+
+.button-cart:hover {
+  opacity: 0.8;
 }
