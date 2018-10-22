@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { addLocaleData } from 'react-intl';
-import en from 'react-intl/locale-data/en';
-import ru from 'react-intl/locale-data/ru';
 import { Provider } from 'react-redux';
 import { userLogin } from './redux/actions/account';
 import { updateBookToCart } from './redux/actions/cart';
@@ -27,9 +24,6 @@ if(localStorage.token) {
 if(localStorage.cart) {
   store.dispatch(updateBookToCart(JSON.parse(localStorage.cart)));
 }
-
-addLocaleData(en);
-addLocaleData(ru);
 
 if(localStorage.lang) {
   store.dispatch(setLocale(localStorage.lang));
