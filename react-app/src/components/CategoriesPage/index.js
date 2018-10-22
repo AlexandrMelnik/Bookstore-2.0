@@ -10,11 +10,14 @@ class CategoriesPage extends Component {
       <div className="categories_page">
         <h4>
           <Label bsStyle="primary">
-             Category
+             { i18next.t('menu_categories') }
           </Label>
         </h4>
         <hr />
-        {!loading ? i18next.t('loading') : <BooksList books={books} />}
+        { !loading
+          ? i18next.t('loading')
+          : <BooksList books={books} />
+        }
       </div>
     );
   }
