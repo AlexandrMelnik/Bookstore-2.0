@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 import {
+  Badge,
   Navbar,
   Button
 } from 'react-bootstrap';
@@ -12,7 +13,7 @@ const CartHeader = (props) => (
     <Link to="/cart">
       <Button className="button-cart">
         <FontAwesome name="shopping-cart" />
-        <span> {props.itemsLength} </span>
+        <Badge>{props.itemsLength}</Badge>
        </Button>
     </Link>
   </Navbar.Form>
