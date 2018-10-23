@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAllBooks } from '../redux/actions/books';
 import { getCategories } from '../redux/actions/categories';
+import ScrollUpButton from "react-scroll-up-button";
 import PropTypes from 'prop-types';
 import Routes from '../Routes';
 import Header from './HeaderContainer';
 import Footer from '../components/Footer';
+
 
 class App extends Component {
   componentDidMount() {
@@ -18,6 +20,7 @@ class App extends Component {
     return (
       <div className="app">
         <Header history={history} />
+        <ScrollUpButton />
         <Routes location={ location } />
         <Footer />
       </div>
