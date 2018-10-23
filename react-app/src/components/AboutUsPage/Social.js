@@ -2,10 +2,10 @@ import React from 'react';
 import i18next from 'i18next';
 
 const socials = [
-  {img: '/social/google.svg', name: 'Google plus'},
-  {img: '/social/facebook.svg', name: 'Facebook'},
-  {img: '/social/instagram.svg', name: 'Instagram'},
-  {img: '/social/tumblr.svg', name: 'Tumblr'},
+  {img: '/social/google.svg', name: 'Google plus', link: 'https://plus.google.com/discover'},
+  {img: '/social/facebook.svg', name: 'Facebook', link: 'https://www.facebook.com'},
+  {img: '/social/instagram.svg', name: 'Instagram', link: 'https://www.instagram.com/?hl=ru'},
+  {img: '/social/tumblr.svg', name: 'Tumblr', link: 'https://www.tumblr.com'},
 ];
 
 const Social = () => (
@@ -15,10 +15,12 @@ const Social = () => (
     </h4>
     <hr className='modern-hr' />
     {socials.map((social, index) => (
-      <div key={index} style={{marginBottom: '20px'}}>
-        <img src={social.img} alt={social.name} />
-        <span style={{marginLeft: '20px'}}>{social.name}</span>
-      </div>
+      <a key={index} href={social.link} target="_blank">
+        <div style={{marginBottom: '20px'}}>
+          <img src={social.img} alt={social.name} />
+          <span style={{marginLeft: '20px'}}>{social.name}</span>
+        </div>
+      </a>
     ))}
   </div>
 );
