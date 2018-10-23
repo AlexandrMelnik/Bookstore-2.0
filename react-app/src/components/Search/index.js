@@ -16,6 +16,7 @@ class Search extends Component {
     if (e.key === 'Enter') {
       if(e.target.value) {
         this.props.history.push('/search/' + this.state.text);
+        this.setState({ text: '' });
       }
     }
   }
