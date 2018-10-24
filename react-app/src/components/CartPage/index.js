@@ -4,6 +4,13 @@ import { Panel, Col } from 'react-bootstrap';
 import CartItemsList from '../../containers/CartItemsListContainer';
 
 class CartPage extends Component {
+  totalPrice(cartItems) {
+    return cartItems.reduce((price, item) => {
+     price += item.price * item.count;
+     return price;
+    }, 0);
+  }
+
   render () {
     const { itemsLength, cartItems } = this.props;
     return (
@@ -14,15 +21,14 @@ class CartPage extends Component {
                {i18next.t('items', {count: itemsLength})}
             </h4>
             <hr />
-
             <CartItemsList  />
             {!itemsLength
               ? ''
               : <h4>
                  {i18next.t('total_price')}
-                 <span style={{color: 'green'}}>
+                 <span className="color-green">
                    {' '}
-                   ${this.totalPrice(cartItems)}
+                   $ {this.totalPrice(cartItems)}
                  </span>
                </h4>
              }
@@ -30,13 +36,6 @@ class CartPage extends Component {
         </Panel>
       </Col>
     );
-  }
-
-  totalPrice(cartItems) {
-    return cartItems.reduce((price, item) => {
-      price += item.price * item.count;
-      return price;
-    }, 0);
   }
 }
 

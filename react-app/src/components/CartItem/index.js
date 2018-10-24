@@ -26,14 +26,14 @@ class CartItem extends Component {
           <h5>
             {i18next.t('price')}:
             {' '}
-            <span style={{color: 'green'}}>
+            <span className="color-green">
               ${this.props.cartItem.price * this.props.cartItem.count}
             </span>
           </h5>
         </Media.Body>
         <Media.Left>
           <Button onClick={this.props.deleteItem}>
-            <FontAwesome name="times" style={{display: 'block'}} />
+            <FontAwesome name="times" />
           </Button>
         </Media.Left>
         <hr />

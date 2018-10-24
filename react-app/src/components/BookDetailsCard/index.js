@@ -40,14 +40,13 @@ class BookDetailsCard extends Component {
                 starDimension="20px"
                 starSpacing="2px"
               />
-              <h4 style={{color: 'green'}}>
+            <h4 className="color-green">
                 $ {price}
               </h4>
-              <p style={{marginTop: '1.300rem'}}>{ description }</p>
+              <p>{ description }</p>
               <Button bsStyle={this.state.addCartActiveClass} onClick={this.addToCart.bind(this, this.props)}>
                 <FontAwesome name={this.state.addCartActiveIcon} /> {i18next.t('add_to_cart')}
               </Button>
-              <p style={{marginTop: '1.300rem'}}> {i18next.t('menu_categories')}: Drama, Fentesy </p>
             </Col>
           </Row>
         </Panel.Body>
