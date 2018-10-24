@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import i18next from 'i18next';
 import { Label } from 'react-bootstrap';
 import BooksList from '../BooksList';
