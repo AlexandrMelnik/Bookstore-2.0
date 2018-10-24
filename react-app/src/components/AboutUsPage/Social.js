@@ -10,15 +10,15 @@ const socials = [
 
 const Social = () => (
   <div className="social">
-    <h4 style={{marginTop: '40px'}}>
+    <h4 className="md-4">
       {i18next.t('socials')}
     </h4>
     <hr className='modern-hr' />
     {socials.map((social, index) => (
       <a key={index} href={social.link} target="_blank">
-        <div style={{marginBottom: '20px'}}>
+        <div key={index} className="mb-2">
           <img src={social.img} alt={social.name} />
-          <span style={{marginLeft: '20px'}}>{social.name}</span>
+          <span className="ml-1">{social.name}</span>
         </div>
       </a>
     ))}

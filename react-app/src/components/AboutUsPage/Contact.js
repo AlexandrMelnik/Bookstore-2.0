@@ -11,14 +11,14 @@ const contacts = [
 
 const Contact = () => (
   <div className="contacts">
-    <h4 style={{marginTop: '40px'}}>
+    <h4 className="md-4">
       {i18next.t('contacts')}
     </h4>
     <hr className='modern-hr' />
     {contacts.map((contact, index) => (
-      <div key={index} style={{marginBottom: '20px'}}>
+      <div key={index} className="mb-2">
         <img src={contact.img} alt={contact.name} />
-        <span style={{marginLeft: '10px'}}>{contact.name}</span>
+        <span className="ml-1">{contact.name}</span>
       </div>
     ))}
   </div>
