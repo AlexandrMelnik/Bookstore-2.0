@@ -11,15 +11,11 @@ class BookDetailsPage extends Component {
     const { book, loading, addBookToCart } = this.props;
     return (
       <Col md={8} mdOffset={2}>
-        {!loading ? 'Loading details book...' :
-          <BookDetailsCard
-            id={book.id}
-            title={book.title}
-            image={book.image}
-            desc={book.description}
-            rating={book.rating}
-            price={book.price}
-            addBookToCart={addBookToCart} />}
+        {loading
+          ? <BookDetailsCard
+            {...book}
+            addBookToCart={addBookToCart} />
+          : 'Loading details book...'}
       </Col>
     );
   }

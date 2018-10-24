@@ -23,7 +23,7 @@ class BookDetailsCard extends Component {
       title,
       price,
       rating,
-      desc
+      description
     } = this.props;
 
     return (
@@ -43,7 +43,7 @@ class BookDetailsCard extends Component {
               <h4 style={{color: 'green'}}>
                 $ {price}
               </h4>
-              <p style={{marginTop: '1.300rem'}}>{ desc }</p>
+              <p style={{marginTop: '1.300rem'}}>{ description }</p>
               <Button bsStyle={this.state.addCartActiveClass} onClick={this.addToCart.bind(this, this.props)}>
                 <FontAwesome name={this.state.addCartActiveIcon} /> {i18next.t('add_to_cart')}
               </Button>
