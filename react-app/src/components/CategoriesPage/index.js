@@ -14,9 +14,9 @@ class CategoriesPage extends Component {
           </Label>
         </h4>
         <hr />
-        { !loading
-          ? i18next.t('loading')
-          : <BooksList books={books} />
+        { loading
+          ? <BooksList books={books} />
+          : i18next.t('loading')
         }
       </div>
     );
