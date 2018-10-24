@@ -3,8 +3,7 @@ import i18next from 'i18next';
 import ReactAutocomplete  from 'react-autocomplete';
 import {
   Navbar,
-  FormGroup,
-  FormControl
+  FormGroup
 } from 'react-bootstrap';
 
 class Search extends Component {
