@@ -1,25 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import i18next from 'i18next';
 import { Col, Panel } from 'react-bootstrap';
 import SigninForm from '../../containers/SigninFormContainer';
 import './index.css';
 
-class SigninPage extends Component {
-  render () {
-    return(
-      <Col md={4} mdOffset={4}>
-        <Panel>
-          <Panel.Body>
-            <h4>
-              {i18next.t('menu_signin')}
-            </h4>
-            <hr />
-            <SigninForm />
-          </Panel.Body>
-        </Panel>
-      </Col>
-    );
-  }
-}
+const SigninPage = () => (
+  <Col md={4} mdOffset={4}>
+    <Panel>
+      <Panel.Body>
+        <h4>
+          {i18next.t('menu_signin')}
+        </h4>
+        <hr />
+        <SigninForm />
+      </Panel.Body>
+    </Panel>
+  </Col>
+);
 
 export default SigninPage;
