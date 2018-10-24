@@ -3,7 +3,6 @@ import { Label } from 'react-bootstrap';
 import BooksList from '../BooksList';
 import i18next from 'i18next';
 
-
 class HomePage extends Component {
   render() {
     const { loading, books } = this.props;
@@ -15,7 +14,10 @@ class HomePage extends Component {
           </Label>
         </h4>
         <hr />
-        {!loading ? i18next.t('loading') : <BooksList books={books} />}
+        {loading
+          ? <BooksList books={books} /> 
+          : i18next.t('loading')
+        }
       </div>
     );
   }
