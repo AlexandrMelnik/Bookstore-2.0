@@ -4,7 +4,7 @@ import CartItem from '../../containers/CartItemContainer';
 
 class CartItemsList extends Component {
   /**
-   * Adds the amount of goods in the cart
+   * Adds the amount +1 of goods in the cart 
    * @param {number} id 
    */
   AddQuantity (id) {
@@ -12,7 +12,7 @@ class CartItemsList extends Component {
   }
 
   /**
-   * Reduces the amount of goods in the cart
+   * Reduces the amount -1 of goods in the cart
    * @param {number} id 
    */
   DeductQuantity (id) {
