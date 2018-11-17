@@ -3,14 +3,26 @@ import i18next from 'i18next';
 import CartItem from '../../containers/CartItemContainer';
 
 class CartItemsList extends Component {
+  /**
+   * Adds the amount of goods in the cart
+   * @param {number} id 
+   */
   AddQuantity (id) {
     this.props.updateQuantityItem({id, quantity: 1})
   }
 
+  /**
+   * Reduces the amount of goods in the cart
+   * @param {number} id 
+   */
   DeductQuantity (id) {
     this.props.updateQuantityItem({id, quantity: -1})
   }
 
+  /**
+   * Removes items from the cart
+   * @param {number} id 
+   */
   deleteItem (id) {
     this.props.deleteCartItem({id})
   }
